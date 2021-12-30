@@ -11,6 +11,7 @@ class BF_Festival{
     {
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets'), 10);
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets'), 10);
+
         add_action( 'init', array( $this, 'custom_post_type') );
         add_filter( 'single_template', array( $this, 'single_template') );
         add_filter( 'template_include', array( $this, 'archive_template') );
@@ -197,6 +198,18 @@ class BF_Festival{
         if( isset( $_POST['bf_festival_end_date'] ) )
             update_post_meta( $post_id, 'bf_festival_end_date', $_POST['bf_festival_end_date'] );
 
+    }
+
+    public static function get_eventos($id_festival){
+        $eventos = get_posts( [
+            'post_type' => 'evento',
+            'post_status' => 'publish',
+            'meta_key'		=> 'bf_evento_festival',
+            'meta_value'	=> $id_festival,
+            'numberposts' => -1,
+        ] );
+
+        return $eventos;
     }
 }
 

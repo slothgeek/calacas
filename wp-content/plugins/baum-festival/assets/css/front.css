@@ -1,3 +1,8 @@
+.festival {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .festival .festival-inner {
     max-width: 1100px;
     margin: 0 auto;
@@ -7,13 +12,13 @@
     text-align: center;
 }
 
-.festival ul{
+.festival .festival-inner > ul{
     margin: 50px 0;
     list-style: none;
     padding: 0;
 }
 
-.festival li a{
+.festival li .item{
     text-decoration: none;
     display: flex;
     position: relative;
@@ -21,28 +26,85 @@
     transition: all .3s ease-in-out;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
-.festival li a .action{
+.festival li .item .action{
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
 
-.festival li a:hover{
+.festival li .item:hover{
     transform: scale(1.01);
     box-shadow: 0 0 10px 5px rgba(0,0,0,.3);
 }
 
-.festival li a:hover .action{
+.festival li .item:hover .action{
     font-weight: bold;
 }
 
-.festival li a .info{
-    margin-left: 20px;
+.festival li .item .info{
+    margin-left: 10px;
+    flex: 1;
+    padding: 10px;
 }
 
+.festival .banner{
+    margin: 30px 0;
+}
+
+.festival .banner img{
+    max-width: 100%;
+}
+.festival .description, .evento .description{
+    text-align: left;
+    margin: 30px 0;
+}
+
+
 .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 0;
     background-color: transparent;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.btn:hover{
+    background-color: var(--global--color-primary);
+    color: #fff;
+}
+
+.evento{
+    text-align: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.evento .evento-info, .festival .festival-info{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.evento .info-data, .festival .info-data{
+    background-color: var(--global--color-primary);
+    color: #fff;
+    padding: 5px 30px;
+    border-radius: 30px;
+    margin-right: 20px;
+}
+
+.evento .evento-artista{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.evento .evento-artista span{
+    font-size: 2rem;
 }
