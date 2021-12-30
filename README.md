@@ -9,3 +9,7 @@
 
 ##Advertencias
 - La opción de menú Festival tiene ruta fijas para el Archive de Festival http://localhost/calacas/festivales/
+
+##Accesos
+- Usuario: keeg
+- Contraseña: BaumDigital2021
