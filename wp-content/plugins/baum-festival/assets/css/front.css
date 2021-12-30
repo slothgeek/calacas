@@ -1,0 +1,48 @@
+.festival .festival-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.festival h1{
+    text-align: center;
+}
+
+.festival ul{
+    margin: 50px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.festival li a{
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    background-color: rgba(255,255,255,.2);
+    transition: all .3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.festival li a .action{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.festival li a:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.3);
+}
+
+.festival li a:hover .action{
+    font-weight: bold;
+}
+
+.festival li a .info{
+    margin-left: 20px;
+}
+
+.btn{
+    border: 0;
+    background-color: transparent;
+}
